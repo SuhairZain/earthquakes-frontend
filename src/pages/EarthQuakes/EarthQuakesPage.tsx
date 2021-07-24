@@ -134,6 +134,21 @@ export const EarthQuakesPage = (props: IEarthQuakesPageProps) => {
           style={{ marginLeft: 16 }}
         />
       </div>
+      <div
+        style={{ marginTop: 16, justifyContent: "flex-start", display: "flex" }}
+      >
+        <TextField
+          id="fullSearch"
+          label="Search in title"
+          value={params.fullSearch}
+          onChange={handleInputValueChange(
+            props,
+            params,
+            setParams,
+            "fullSearch"
+          )}
+        />
+      </div>
       <DataGrid
         rows={earthQuakes}
         columns={columns}
@@ -161,7 +176,7 @@ const getParams = (props: IEarthQuakesPageProps) => {
     minMagnitude = 0,
     startDate = new Date(new Date().getTime() - DAYS_7),
     endDate = new Date(),
-    fullSearch,
+    fullSearch = "",
     sortBy,
     sortDirection,
   } = parse(props.location.search);
