@@ -98,11 +98,13 @@ export const EarthQuakesPage = (props: IEarthQuakesPageProps) => {
     >
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <DatePicker
+          label="Start date"
           value={params.startDate}
           onChange={handleDateChange(props, "startDate")}
           style={{ marginTop: 16 }}
         />
         <DatePicker
+          label="End date"
           value={params.endDate}
           onChange={handleDateChange(props, "endDate")}
           style={{ marginLeft: 16, marginTop: 16 }}
