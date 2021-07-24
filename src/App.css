@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  flex: 1;
+  align-self: stretch;
+  display: flex;
 }
 
 .App-logo {
@@ -28,4 +31,3 @@
 .App-link {
   color: #61dafb;
 }
-
