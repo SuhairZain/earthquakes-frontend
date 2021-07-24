@@ -1,0 +1,1 @@
+export { EarthQuakesPage } from "./EarthQuakesPage";

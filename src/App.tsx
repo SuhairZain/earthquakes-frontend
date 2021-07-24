@@ -1,14 +1,16 @@
 import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
 import "./App.css";
-import { Button } from "@material-ui/core";
+
+import { EarthQuakesPage } from "./pages/EarthQuakes";
 
 const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>Welcome to world.</p>
-        <Button>Click me</Button>
-      </header>
+      <Router>
+        <Route path="/" component={EarthQuakesPage} />
+      </Router>
     </div>
   );
 };
